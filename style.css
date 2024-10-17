@@ -1,0 +1,244 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Custom font for better typography */
+}
+
+/* Body */
+body {
+    background-color: #174386, white, skyblue; /* Lighter background color */
+    color: #444; /* Darker text for better contrast */
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: rgba(132, 160, 216, 0.9); /* Darker header background */
+    padding: 15px;
+    text-align: center;
+    color: #e54848;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+    font-size: 2.8rem; /* Slightly larger heading */
+    margin-bottom: 5px;
+    color: #fff;
+    text-shadow: 0 0 10px #FF6F61, 0 0 20px #00FFCC, 0 0 40px #FF1493;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Intro Section */
+.intro {
+    padding: 50px 20px; /* Slightly larger padding for balance */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Added transparency for background */
+}
+
+.intro-content h2 {
+    font-size: 2.6rem;
+    color: #2C3E50;
+    margin-bottom: 15px;
+    font-family: 'Lora', serif;
+    position: relative;
+    white-space: nowrap;
+     
+}
+
+.intro-content p {
+    font-size: 1.4rem; /* Larger font size for better readability */
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    animation: marqueeHorizontal 20s linear infinite; /* Marquee effect for text */
+}
+
+/* Insect List Section - Static */
+.insect-list {
+    padding: 60px 20px; /* Larger padding for ample spacing */
+    text-align: center;
+    animation: none; /* No animation */
+}
+
+.insect-list h2 {
+    font-size: 2.5rem;
+    color: #9b59b6;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    white-space: nowrap;
+    animation: none; /* No animation */
+}
+
+/* Insect Grid - Static */
+.insect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjusted column size for better spacing */
+    gap: 20px; /* Increased gap for better layout */
+    justify-content: center;
+}
+
+.insect-card {
+    background: rgba(255, 255, 255, 0.9); /* Updated transparency for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.insect-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.insect-card h3 {
+    font-size: 1.7rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-family: 'Lora', serif;
+}
+
+.insect-card p {
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.insect-card a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.insect-card a:hover {
+    color: #16a085;
+    text-shadow: 0 0 10px #16A085, 0 0 15px #16A085;
+}
+
+/* Floating Text - Horizontal */
+.floating-text {
+    position: relative;
+    overflow: visible;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #338fec;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.float-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 2rem; /* Increased font size for visibility */
+    color: #fff;
+    animation: marqueeHorizontal 12s linear infinite;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 10px #FF6347, 0 0 15px #00FFCC;
+}
+
+/* Parallax Scrolling Section */
+.parallax-section {
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #eaeaea;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.parallax-section h2 {
+    font-size: 2.8rem;
+    color: #8ddf45,yellows;
+    margin-bottom: 15px;
+    font-family: 'Lora', serif;
+    animation: marqueeVertical 15s linear infinite;
+}
+
+.parallax-section p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    animation: marqueeVertical 15s linear infinite;
+}
+
+/* Footer */
+footer {
+    background-color: #8e44ad,white;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Keyframes for Animations */
+@keyframes marqueeHorizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marqueeVertical {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

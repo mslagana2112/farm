@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Feedback Form Container */
+.feedback-form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px 20px; /* Smaller padding */
+    border-radius: 8px; /* Reduced border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
+    width: 350px; /* Smaller width */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Form Heading */
+.feedback-form-container h1 {
+    margin: 10px 0; /* Reduced margin */
+    padding: 5px 10px; /* Smaller padding */
+    background-color: #ffffffcc; /* Slightly translucent background */
+    border: 2px solid #2c3e50; /* Reduced border size */
+    border-radius: 5px; /* Slightly smaller border-radius */
+    color: #2C3E50;
+    font-size: 1.5rem; /* Smaller font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.emoji {
+    font-size: 1.5rem; /* Smaller emoji size */
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px; /* Decreased margin-bottom */
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem; /* Smaller font size */
+    color: #34495e;
+    margin-bottom: 6px; /* Reduced margin */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller text */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+/* Rating Section */
+.rating-group {
+    text-align: left;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.rating-group label {
+    font-size: 0.9rem; /* Smaller label font size */
+    color: #34495e;
+    margin-bottom: 4px; /* Decreased margin */
+    display: block;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rating input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+/* Label (Stars) */
+.rating label {
+    font-size: 2rem; /* Larger star size */
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Change color of stars on hover */
+.rating label:hover,
+.rating input[type="radio"]:checked ~ label {
+    color: #f39c12;
+    transform: scale(1.2);
+}
+
+/* Automatically adjust stars when radio buttons are checked */
+.rating input[type="radio"]:checked ~ label {
+    color: #f39c12; /* Yellow when selected */
+}
+
+/* When 1 star is selected, only 1 star is highlighted */
+#star1:checked ~ label:nth-child(2),
+#star2:checked ~ label:nth-child(3),
+#star3:checked ~ label:nth-child(4),
+#star4:checked ~ label:nth-child(5),
+#star5:checked ~ label:nth-child(6) {
+    color: #f39c12; /* Yellow stars */
+}
+
+.rating input[type="radio"]:checked ~ label {
+    color: #f39c12; /* Color of selected stars */
+}
+
+.rating label {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+/* Button */
+button {
+    padding: 10px 18px; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px; /* Decreased margin */
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Star Rating */
+.rating-group {
+    text-align: left;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.rating-group label {
+    font-size: 0.9rem; /* Smaller label font size */
+    color: #34495e;
+    margin-bottom: 4px; /* Decreased margin */
+    display: block;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 1.5rem; /* Smaller star size */
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rating label:hover,
+.rating input[type="radio"]:checked ~ label {
+    color: #f39c12;
+    transform: scale(1.2);
+}
+
+.rating input[type="radio"]:checked {
+    color: #f39c12;
+}
+
+/* 3D Emoji Hover Effect */
+.emoji:hover {
+    transform: scale(1.3) rotate(5deg); /* Smaller hover effect */
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .feedback-form-container {
+        padding: 15px 10px;
+        width: 300px; /* Smaller form width on mobile */
+    }
+
+    .feedback-form-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px 14px;
+    }
+}
